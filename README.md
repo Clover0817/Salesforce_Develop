@@ -20,7 +20,33 @@ ex)주식 시세 서비스에 콜아웃을 만들어 최신 시세 얻어오기 
 비동기 호출은 백그라운드 프로세스에서 수행, 외부 서비스를 반환할 경우 응답이 수신됨.
 <br>
 <h3>|Apex Trigger Test</h3>
-
+1. Test class must start with @isTest annotation if class class version is more than 25.<br>
+2. Test environment support @testVisible , @testSetUp as well.<br>
+3. Unit test is to test particular piece of code working properly or not.<br>
+4. Unit test method takes no argument, commit no data to database, send no email, flagged with testMethod keyword.<br>
+5. To deploy to production at-least 75% code coverage is required. <br>
+6. System.debug statement are not counted as a part of apex code limit.<br>
+7. Test method and test classes are not counted as a part of code limit.<br>
+9. We should not focus on the  percentage of code coverage, we should make sure that every use case should covered including positive, negative, bulk and single record .<br>
+11 . @isTest annotation with test method  is equivalent to testMethod keyword.<br>
+12. Test method should static and no void return type .<br>
+13. Test class and method default access is private ,no matter to add access specifier .<br>
+14. classes with @isTest annotation can't be a interface or enum .<br>
+15. Test method code can't be invoked by non test request .<br>
+16. Stating with salesforce API 28.0 test method can not reside inside non test classes .<br>
+17. @Testvisible annotation to make visible private methods inside test classes.<br>
+18. Test method can not be used to test web-service call out . Please use call out mock .<br>
+19. You can't  send email from test method.<br>
+20.User, profile, organization, AsyncApexjob, Corntrigger, RecordType, ApexClass, ApexComponent ,ApexPage we can access without (seeAllData=true) .<br>
+21. SeeAllData=true will not work for API 23 version eailer .<br>
+22. Accessing static resource test records in test class e,g List<Account> accList=Test.loadData(Account,SobjectType,'ResourceName').<br>
+23. Create TestFactory class with @isTest annotation to exclude from organization code size limit .<br>
+24. @testSetup to create test records once in a method  and use in every test method in the test class .<br>
+25. We can run unit test by using Salesforce Standard UI,Force.com IDE ,Console ,API.<br>
+26. Maximum number of test classes run per 24 hour of period is  not grater of 500 or 10 multiplication of test classes of your organization.<br>
+27. As apex runs in system mode so the permission and record sharing are not taken into account . So we need to use system.runAs to enforce record sharing .<br>
+28. System.runAs will not enforce user permission or field level permission .<br>
+29. Every test to runAs count against the total number of DML issued in the process .<br>
 <h3>|에러 해결</h3>
 1. The nonstatic method cannot be referenced from a static context.<br>
 -Change the method to static <br>

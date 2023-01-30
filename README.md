@@ -47,7 +47,13 @@ ex)주식 시세 서비스에 콜아웃을 만들어 최신 시세 얻어오기 
 27. As apex runs in system mode so the permission and record sharing are not taken into account . So we need to use system.runAs to enforce record sharing .<br>
 28. System.runAs will not enforce user permission or field level permission .<br>
 29. Every test to runAs count against the total number of DML issued in the process .<br>
-<h3>|에러 해결</h3>
+<h3>|문제 해결</h3>
 1. The nonstatic method cannot be referenced from a static context.<br>
 -Change the method to static <br>
--Address the non-static variable with the object name
+-Address the non-static variable with the object name<br>
+
+2. date 필드에서 year만 추출<br>
+date field -> YEAR(Field__c)<br>
+date/time field -> YEAR(DATEVALUE(Field__c))<br>
+To display it by itself -> need to be a number return type <br>
+To make it back into a date -> need to use DATE (ex) DATE(YEAR(DATEVALUE(Field__c)), 1, 1 <br>

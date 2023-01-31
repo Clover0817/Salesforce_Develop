@@ -60,3 +60,11 @@ To make it back into a date -> need to use DATE (ex) DATE(YEAR(DATEVALUE(Field__
 
 3. if you are creating trigger before insert or before update, then you should do changes on the trigger.new list only.
    Do not create another list for update.
+
+4. Dependent class is invalid and needs recompilation <br>
+Setup | Custom Code | Apex Classes -> Compile all classes <br>
+Setup | Custom Code | Apex Triggers -> Compile all triggers <br>
+
+5. A non foreign key field cannot be referenced in a path expression: AccountId <br>
+Replace this line oppJobList.add(opp.AccountId.Name) <br>
+with this code oppJobList.add(opp.Account.Name) <br>

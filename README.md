@@ -68,3 +68,8 @@ Setup | Custom Code | Apex Triggers -> Compile all triggers <br>
 5. A non foreign key field cannot be referenced in a path expression: AccountId <br>
 Replace this line oppJobList.add(opp.AccountId.Name) <br>
 with this code oppJobList.add(opp.Account.Name) <br>
+
+************************************************************************************************************************************************************<br>
+<h3>|Lightning Web Component</h3>
+![image](https://user-images.githubusercontent.com/77714668/216212618-7672b7bf-9273-4efe-ac37-ac376880b3b0.png)
+

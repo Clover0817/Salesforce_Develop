@@ -71,4 +71,7 @@ with this code oppJobList.add(opp.Account.Name) <br>
 
 ************************************************************************************************************************************************************<br>
 <h3>|Lightning Web Component</h3>
-
+[예시]<br>
+CreateUser.cmp—The Lightning component that you see when you open the action. It contains the UI implementation, which includes the text fields, buttons, action title, and so on.<br>
+CreateUserController.js—The controller that listens to the component and any UI events that take place, such as the initial load, text input, and button clicks. Its function is to delegate these events to the helper class, CreateUserHelper.js.<br>
+CreateUserHelper.js—The code that deals with all the business logic, such as validating the password and email fields. <br>

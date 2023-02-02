@@ -71,5 +71,4 @@ with this code oppJobList.add(opp.Account.Name) <br>
 
 ************************************************************************************************************************************************************<br>
 <h3>|Lightning Web Component</h3>
-![image](https://user-images.githubusercontent.com/77714668/216212618-7672b7bf-9273-4efe-ac37-ac376880b3b0.png)
 

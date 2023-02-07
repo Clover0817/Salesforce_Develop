@@ -69,6 +69,9 @@ Setup | Custom Code | Apex Triggers -> Compile all triggers <br>
 Replace this line oppJobList.add(opp.AccountId.Name) <br>
 with this code oppJobList.add(opp.Account.Name) <br>
 
+6. Apex class에서 Date 변수값 설정<br>
+Date d = Date.newInstance(2023.01.01) <br>
+파라미터로 Date 넘길 때도, 변수 선언해서 전달
 ************************************************************************************************************************************************************<br>
 <h3>|Lightning Web Component</h3>
 [예시]<br>

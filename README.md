@@ -84,6 +84,24 @@ global :- This means the method or variable can be used by any Apex code that ha
 Future method is used to run processes in a seperate thread. <br>
 It must be static, only return void type. <br>
 +)To test future methods, enclose your test code between the startTest() and stopTest() test methods. <br>
+ 
+ 9. Queueable Apex <br>
+ functionally equivalent to future methods (어떤 때는 동기적으로 실행되고 어떤 때는 비동기적으로 실행될 경우, queueable보다 future method 사용) <br>
+ 
+ 10. Clone Method <br>
+ clone(boolean preserveId, boolean isDeepClone, boolean preserveReadonlyTimestamps, boolean preserveAutonumber) <br>
+<code>
+ ex)
+  public static void cloneRecord(){
+        // retrive contact record for clone
+        Contact con = [SELECT FirstName, Email, LastName FROM Contact LIMIT 1];
+ 
+        // clone record
+        Contact conCopy = con.clone(false, false, false, false);
+        insert conCopy;
+    }
+ 
+ </code>
 <hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>

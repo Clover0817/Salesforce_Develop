@@ -1,3 +1,4 @@
+//test that all Lead records were updated correctly, code-coverage: 100%
 @isTest
 public class LeadProcessorTest {
     static testMethod void testMethod1() {

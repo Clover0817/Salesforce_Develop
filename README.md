@@ -72,7 +72,13 @@ with this code oppJobList.add(opp.Account.Name) <br>
 6. Apex class에서 Date 변수값 설정<br>
 Date d = Date.newInstance(2023.01.01) <br>
 파라미터로 Date 넘길 때도, 변수 선언해서 전달
-************************************************************************************************************************************************************<br>
+
+7. Access modifier <br>
+Private :- This is the default and means that the method or variable is accessible only within the Apex. If you do not specify an access modifier, the method or variable is private. <br>
+Protected :- This means that the method or variable is visible to any inner classes in the defining Apex class, and to the classes that extend the defining Apex class. You can only use this access modifier for instance methods and member variables. <br>
+Public :- This means the method or variable can be used by any Apex in this application or namespace. <br>
+global :- This means the method or variable can be used by any Apex code that has access to the class, not just the Apex code in the same application. This access modifier should be used for any method that needs to be referenced outside of the application, either in the SOAP API or by other Apex code. If you declare a method or variable as global, you must also declare the class that contains it as global. <br>
+*********************************************************************************************************************************************<br>
 <h3>|Lightning Web Component</h3>
 [예시]<br>
 CreateUser.cmp—The Lightning component that you see when you open the action. It contains the UI implementation, which includes the text fields, buttons, action title, and so on.<br>

@@ -1,4 +1,4 @@
-//this Apex Class is used to update all Lead records with a specific LeadSource
+//this Batch Class is used to update all Lead records with a specific LeadSource
 global class LeadProcessor implements Database.Batchable<Sobject> {       //Database.Batchable => interface
     global Database.QueryLocator start(Database.BatchableContext bc) {
         return Database.getQueryLocator([Select LeadSource From Lead ]);   //QueryLocator => to collect all Lead records

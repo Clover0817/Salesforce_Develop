@@ -3,6 +3,8 @@
 Apex는 Java와 유사, 데이터베이스 저장 프로시저와 같이 작동하는 프로그래밍 언어.<br>
 Apex를 통해 버튼 클릭, 관련 레코드 업데이트 및 Visualforce 페이지와 같은 시스템 이벤트에 비즈니스 논리 추가가능.
 <br>
+<h3>|Difference between Java & Apex</h3>
+https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_classes_java_diffs.htm <br>
 <h3>|Apex Trigger</h3>
 <h6>1. System.debug() simply “prints” the value of anything you put inside it.</h6>
 -Before triggers - 데이터베이스에 저장하기 전에 레코드 값을 업데이트하거나 유효성을 검사하는 데 사용<br>

@@ -1,10 +1,10 @@
-/*this Apex Class is used to update all Lead records with a specific LeadSource*/
-global class LeadProcessor implements Database.Batchable<Sobject> {       /*Database.Batchable => interface*/
+//this Apex Class is used to update all Lead records with a specific LeadSource
+global class LeadProcessor implements Database.Batchable<Sobject> {       //Database.Batchable => interface
     global Database.QueryLocator start(Database.BatchableContext bc) {
-        return Database.getQueryLocator([Select LeadSource From Lead ]);   /*QueryLocator => to collect all Lead records*/
+        return Database.getQueryLocator([Select LeadSource From Lead ]);   //QueryLocator => to collect all Lead records
     }
     
-    global void execute(Database.BatchableContext bc, List<Lead> scope) {  /*update all Lead records in the org with the LeadSource value of Dreamforce*/
+    global void execute(Database.BatchableContext bc, List<Lead> scope) {  //update all Lead records in the org with the LeadSource value of Dreamforce
         for (Lead Leads : scope) {
             Leads.LeadSource = 'Dreamforce';
         }

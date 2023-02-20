@@ -90,7 +90,7 @@ It must be static, only return void type. <br>
  
  10. Clone Method <br>
  clone(boolean preserveId, boolean isDeepClone, boolean preserveReadonlyTimestamps, boolean preserveAutonumber) <br>
-<code>
+```
  ex)
   public static void cloneRecord(){
         // retrive contact record for clone
@@ -101,7 +101,7 @@ It must be static, only return void type. <br>
         insert conCopy;
     }
  
- </code>
+```
 <hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>

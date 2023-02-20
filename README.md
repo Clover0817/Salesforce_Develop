@@ -48,6 +48,7 @@ ex)주식 시세 서비스에 콜아웃을 만들어 최신 시세 얻어오기 
 28. System.runAs will not enforce user permission or field level permission .<br>
 29. Every test to runAs count against the total number of DML issued in the process .<br>
 <h3>|문제 해결 및 주의 사항</h3>
+<br>
 1. The nonstatic method cannot be referenced from a static context.<br>
 -Change the method to static <br>
 -Address the non-static variable with the object name<br>
@@ -78,7 +79,12 @@ Private :- This is the default and means that the method or variable is accessib
 Protected :- This means that the method or variable is visible to any inner classes in the defining Apex class, and to the classes that extend the defining Apex class. You can only use this access modifier for instance methods and member variables. <br>
 Public :- This means the method or variable can be used by any Apex in this application or namespace. <br>
 global :- This means the method or variable can be used by any Apex code that has access to the class, not just the Apex code in the same application. This access modifier should be used for any method that needs to be referenced outside of the application, either in the SOAP API or by other Apex code. If you declare a method or variable as global, you must also declare the class that contains it as global. <br>
-*********************************************************************************************************************************************<br>
+ 
+ 8. Future Method <br>
+Future method is used to run processes in a seperate thread. <br>
+It must be static, only return void type. <br>
++)To test future methods, enclose your test code between the startTest() and stopTest() test methods. <br>
+<hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>
 CreateUser.cmp—The Lightning component that you see when you open the action. It contains the UI implementation, which includes the text fields, buttons, action title, and so on.<br>

@@ -104,6 +104,12 @@ It must be static, only return void type. <br>
     }
  
 ```
+
+11. Cron <br>
+Cron is a software utility time-based job scheduler <br>
+Cron Expression is a string of 5 or 6 fields separated by white spaces that represents a set of times, as a schedule to execute some routine
+
+<code>String CRON_EXP = '0 0 1 * * ?';</code>
 <hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>

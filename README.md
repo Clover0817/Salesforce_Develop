@@ -107,8 +107,14 @@ It must be static, only return void type. <br>
 
 11. Cron <br>
 Cron is a software utility time-based job scheduler <br>
-Cron Expression is a string of 5 or 6 fields separated by white spaces that represents a set of times, as a schedule to execute some routine
-
+Cron Expression is a string of 5 or 6 fields separated by white spaces that represents a set of times, as a schedule to execute some routine <br>
+ 
+ 12. HTTP Method <br>
+ GET: Retrieve data identified by URL <br>
+ POST: Create a resource or post data to the server <br>
+ DELETE: Delete a resource identified by a URL <br>
+ PUT: Create or replace the resource sent in the request body <br>
+ 
 <code>String CRON_EXP = '0 0 1 * * ?';</code>
 <hr>
 <h3>|Lightning Web Component</h3>

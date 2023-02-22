@@ -116,6 +116,11 @@ Cron Expression is a string of 5 or 6 fields separated by white spaces that repr
  PUT: Create or replace the resource sent in the request body <br>
  
 <code>String CRON_EXP = '0 0 1 * * ?';</code>
+
+ 13. Invocable Method <br>
+ Invocable methods are called with REST API & used to invoke single Apex method. <br>
+ Invocable methods have dynamic input & output values <br>
+
 <hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>

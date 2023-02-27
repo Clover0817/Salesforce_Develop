@@ -121,6 +121,20 @@ Cron Expression is a string of 5 or 6 fields separated by white spaces that repr
  Invocable methods are called with REST API & used to invoke single Apex method. <br>
  Invocable methods have dynamic input & output values <br>
 
+14. SOQL VS SOSL <br>
+Salesforce Object Query Language (SOQL) - Salesforce Object Search Language (SOSL) <br>
+<br>
+*Use SOQL when you know which objects the data resides in, and you want to:<br>
+-Retrieve data from a single object or from multiple objects that are related to one another.<br>
+-Count the number of records that meet specified criteria.<br>
+-Sort results as part of the query.<br>
+-Retrieve data from number, date, or checkbox fields.<br>
+<br>
+*Use SOSL when you don’t know which object or field the data resides in, and you want to:<br>
+-Retrieve data for a specific term that you know exists within a field. Because SOSL can tokenize multiple terms within a field and build a search index from this, SOSL searches are faster and can return more relevant results.<br>
+-Retrieve multiple objects and fields efficiently where the objects might or might not be related to one another.<br>
+-Retrieve data for a particular division in an organization using the divisions feature.<br>
+-Retrieve data that’s in Chinese, Japanese, Korean, or Thai. Morphological tokenization for CJKT terms helps ensure accurate results.<br>
 <hr>
 <h3>|Lightning Web Component</h3>
 [예시]<br>
